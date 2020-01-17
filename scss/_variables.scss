@@ -6,15 +6,15 @@
 // Color system
 
 $white:    #fff !default;
-$gray-100: #f8f9fa !default;
-$gray-200: #e9ecef !default;
-$gray-300: #dee2e6 !default;
-$gray-400: #ced4da !default;
-$gray-500: #adb5bd !default;
-$gray-600: #6c757d !default;
-$gray-700: #495057 !default;
-$gray-800: #343a40 !default;
-$gray-900: #212529 !default;
+$gray-100: $white !default;
+$gray-200: #f5f5f7 !default;
+$gray-300: #eeeef0 !default;
+$gray-400: #cdcdd2 !default;
+$gray-500: #939495 !default;
+$gray-600: #646469 !default;
+$gray-700: #323236 !default;
+$gray-800: #232327 !default;
+$gray-900: #0c0c0c !default;
 $black:    #000 !default;
 
 $grays: () !default;
@@ -38,7 +38,7 @@ $blue:    #007bff !default;
 $indigo:  #6610f2 !default;
 $purple:  #6f42c1 !default;
 $pink:    #e83e8c !default;
-$red:     #dc3545 !default;
+$red:     #ff140f !default;
 $orange:  #fd7e14 !default;
 $yellow:  #ffc107 !default;
 $green:   #28a745 !default;
@@ -66,12 +66,12 @@ $colors: map-merge(
   $colors
 );
 
-$primary:       $blue !default;
+$primary:       $red !default;
 $secondary:     $gray-600 !default;
 $success:       $green !default;
 $info:          $cyan !default;
 $warning:       $yellow !default;
-$danger:        $red !default;
+$danger:        $orange !default;
 $light:         $gray-100 !default;
 $dark:          $gray-800 !default;
 
@@ -115,8 +115,8 @@ $escaped-characters: (
 //
 // Quickly modify global styling by enabling or disabling optional features.
 
-$enable-caret:                                true !default;
-$enable-rounded:                              true !default;
+$enable-caret:                                false !default;
+$enable-rounded:                              false !default;
 $enable-shadows:                              false !default;
 $enable-gradients:                            false !default;
 $enable-transitions:                          true !default;
@@ -124,8 +124,8 @@ $enable-prefers-reduced-motion-media-query:   true !default;
 $enable-hover-media-query:                    false !default; // Deprecated, no longer affects any compiled CSS
 $enable-grid-classes:                         true !default;
 $enable-pointer-cursor-for-buttons:           true !default;
-$enable-print-styles:                         true !default;
-$enable-responsive-font-sizes:                false !default;
+$enable-print-styles:                         false !default;
+$enable-responsive-font-sizes:                true !default;
 $enable-validation-icons:                     true !default;
 $enable-deprecation-messages:                 true !default;
 
@@ -280,8 +280,8 @@ $embed-responsive-aspect-ratios: join(
 // Font, line-height, and color for body text, headings, and more.
 
 // stylelint-disable value-keyword-case
-$font-family-sans-serif:      -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
-$font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+$font-family-sans-serif:      "Uni-Neue-Regular", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$font-family-monospace:       "InterstateMono", SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
 $font-family-base:            $font-family-sans-serif !default;
 // stylelint-enable value-keyword-case
 
@@ -300,21 +300,21 @@ $line-height-base:            1.5 !default;
 
 $h1-font-size:                $font-size-base * 2.5 !default;
 $h2-font-size:                $font-size-base * 2 !default;
-$h3-font-size:                $font-size-base * 1.75 !default;
-$h4-font-size:                $font-size-base * 1.5 !default;
-$h5-font-size:                $font-size-base * 1.25 !default;
-$h6-font-size:                $font-size-base !default;
+$h3-font-size:                $font-size-base * 1.33 !default;
+$h4-font-size:                $font-size-base * 1.07 !default;
+$h5-font-size:                $font-size-base * .93 !default;
+$h6-font-size:                $font-size-base * .87 !default;
 
 $headings-margin-bottom:      $spacer / 2 !default;
 $headings-font-family:        null !default;
-$headings-font-weight:        500 !default;
-$headings-line-height:        1.2 !default;
+$headings-font-weight:        900 !default;
+$headings-line-height:        1.16 !default;
 $headings-color:              null !default;
 
 $display1-size:               6rem !default;
-$display2-size:               5.5rem !default;
-$display3-size:               4.5rem !default;
-$display4-size:               3.5rem !default;
+$display2-size:               5.2rem !default;
+$display3-size:               4.3rem !default;
+$display4-size:               3.4rem !default;
 
 $display1-weight:             300 !default;
 $display2-weight:             300 !default;
@@ -325,7 +325,7 @@ $display-line-height:         $headings-line-height !default;
 $lead-font-size:              $font-size-base * 1.25 !default;
 $lead-font-weight:            300 !default;
 
-$small-font-size:             80% !default;
+$small-font-size:             86% !default;
 
 $text-muted:                  $gray-600 !default;
 
@@ -696,6 +696,21 @@ $zindex-modal:                      1050 !default;
 $zindex-popover:                    1060 !default;
 $zindex-tooltip:                    1070 !default;
 
+
+$zindecies: () !default;
+// stylelint-disable-next-line scss/dollar-variable-default
+$zindecies: map-merge(
+  (
+    "dropdown": $zindex-dropdown,
+    "sticky": $zindex-sticky,
+    "fixed": $zindex-fixed,
+    "modal-backdrop": $zindex-modal-backdrop,
+    "modal": $zindex-modal,
+    "popover": $zindex-popover,
+    "tooltip": $zindex-tooltip,
+  ),
+  $zindecies
+);
 
 // Navs
 
