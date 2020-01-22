@@ -129,7 +129,7 @@ blockquote {
 
 b,
 strong {
-  font-weight: bolder;
+  font-weight: 800;
 }
 
 small {
@@ -361,53 +361,77 @@ template {
   display: none !important;
 }
 
-h1, h2, h3, h4, h5, h6,
-.h1, .h2, .h3, .h4, .h5, .h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
   margin-bottom: 0.5rem;
-  font-weight: 900;
   line-height: 1.16;
 }
 
-h1, .h1 {
+h1,
+.h1 {
   font-size: 2.5rem;
+  font-weight: 800;
 }
 
 @media (max-width: 1200px) {
-  h1, .h1 {
+  h1,
+  .h1 {
     font-size: calc(1.375rem + 1.5vw) ;
   }
 }
 
-h2, .h2 {
+h2,
+.h2 {
   font-size: 2rem;
+  font-weight: 800;
 }
 
 @media (max-width: 1200px) {
-  h2, .h2 {
+  h2,
+  .h2 {
     font-size: calc(1.325rem + 0.9vw) ;
   }
 }
 
-h3, .h3 {
+h3,
+.h3 {
   font-size: 1.33rem;
+  font-weight: 700;
 }
 
 @media (max-width: 1200px) {
-  h3, .h3 {
+  h3,
+  .h3 {
     font-size: calc(1.258rem + 0.096vw) ;
   }
 }
 
-h4, .h4 {
+h4,
+.h4 {
   font-size: 1.07rem;
+  font-weight: 700;
 }
 
-h5, .h5 {
+h5,
+.h5 {
   font-size: 0.93rem;
+  font-weight: 700;
 }
 
-h6, .h6 {
+h6,
+.h6 {
   font-size: 0.87rem;
+  font-weight: 700;
 }
 
 .lead {
@@ -417,7 +441,7 @@ h6, .h6 {
 
 .display-1 {
   font-size: 6rem;
-  font-weight: 300;
+  font-weight: 900;
   line-height: 1.16;
 }
 
@@ -429,7 +453,7 @@ h6, .h6 {
 
 .display-2 {
   font-size: 5.2rem;
-  font-weight: 300;
+  font-weight: 900;
   line-height: 1.16;
 }
 
@@ -441,7 +465,7 @@ h6, .h6 {
 
 .display-3 {
   font-size: 4.3rem;
-  font-weight: 300;
+  font-weight: 900;
   line-height: 1.16;
 }
 
@@ -453,7 +477,7 @@ h6, .h6 {
 
 .display-4 {
   font-size: 3.4rem;
-  font-weight: 300;
+  font-weight: 900;
   line-height: 1.16;
 }
 
@@ -5293,9 +5317,9 @@ a.badge-dark:focus, a.badge-dark.focus {
 .list-group-item {
   position: relative;
   display: block;
-  padding: 0.75rem 1.25rem;
+  padding: 0.75rem 0;
   background-color: #fff;
-  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-bottom: 1px solid #000;
 }
 
 .list-group-item.disabled, .list-group-item:disabled {
@@ -9740,7 +9764,7 @@ button.bg-dark:focus {
 }
 
 .font-weight-lighter {
-  font-weight: lighter !important;
+  font-weight: 200 !important;
 }
 
 .font-weight-normal {
@@ -9752,7 +9776,7 @@ button.bg-dark:focus {
 }
 
 .font-weight-bolder {
-  font-weight: bolder !important;
+  font-weight: 800 !important;
 }
 
 .font-italic {
@@ -9878,6 +9902,18 @@ a.text-dark:hover, a.text-dark:focus {
 
 .invisible {
   visibility: hidden !important;
+}
+
+.z-default {
+  z-index: default;
+}
+
+.z-hover {
+  z-index: hover;
+}
+
+.z-active {
+  z-index: active;
 }
 
 .z-dropdown {

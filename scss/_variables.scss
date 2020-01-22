@@ -289,14 +289,22 @@ $font-size-base:              1rem !default; // Assumes the browser default, typ
 $font-size-lg:                $font-size-base * 1.25 !default;
 $font-size-sm:                $font-size-base * .875 !default;
 
-$font-weight-lighter:         lighter !default;
+$font-weight-lighter:         200 !default;
 $font-weight-light:           300 !default;
 $font-weight-normal:          400 !default;
 $font-weight-bold:            700 !default;
-$font-weight-bolder:          bolder !default;
+$font-weight-bolder:          800 !default;
+$font-weight-boldest:         900 !default;
 
 $font-weight-base:            $font-weight-normal !default;
 $line-height-base:            1.5 !default;
+
+$h1-font-weight:                $font-weight-bolder !default;
+$h2-font-weight:                $font-weight-bolder !default;
+$h3-font-weight:                $font-weight-bold !default;
+$h4-font-weight:                $font-weight-bold !default;
+$h5-font-weight:                $font-weight-bold !default;
+$h6-font-weight:                $font-weight-bold !default;
 
 $h1-font-size:                $font-size-base * 2.5 !default;
 $h2-font-size:                $font-size-base * 2 !default;
@@ -307,7 +315,6 @@ $h6-font-size:                $font-size-base * .87 !default;
 
 $headings-margin-bottom:      $spacer / 2 !default;
 $headings-font-family:        null !default;
-$headings-font-weight:        900 !default;
 $headings-line-height:        1.16 !default;
 $headings-color:              null !default;
 
@@ -316,10 +323,10 @@ $display2-size:               5.2rem !default;
 $display3-size:               4.3rem !default;
 $display4-size:               3.4rem !default;
 
-$display1-weight:             300 !default;
-$display2-weight:             300 !default;
-$display3-weight:             300 !default;
-$display4-weight:             300 !default;
+$display1-weight:             $font-weight-boldest !default;
+$display2-weight:             $font-weight-boldest !default;
+$display3-weight:             $font-weight-boldest !default;
+$display4-weight:             $font-weight-boldest !default;
 $display-line-height:         $headings-line-height !default;
 
 $lead-font-size:              $font-size-base * 1.25 !default;
@@ -688,6 +695,9 @@ $form-validation-states: map-merge(
 // Warning: Avoid customizing these values. They're used for a bird's eye view
 // of components dependent on the z-axis and are designed to all work together.
 
+$zindex-default:                    1 !default;
+$zindex-hover:                      2 !default;
+$zindex-active:                     3 !default;
 $zindex-dropdown:                   1000 !default;
 $zindex-sticky:                     1020 !default;
 $zindex-fixed:                      1030 !default;
@@ -701,6 +711,9 @@ $zindecies: () !default;
 // stylelint-disable-next-line scss/dollar-variable-default
 $zindecies: map-merge(
   (
+    "default": $zindex-default,
+    "hover": $zindex-hover,
+    "active": $zindex-active,
     "dropdown": $zindex-dropdown,
     "sticky": $zindex-sticky,
     "fixed": $zindex-fixed,
@@ -1030,12 +1043,12 @@ $progress-bar-transition:           width .6s ease !default;
 
 $list-group-color:                  null !default;
 $list-group-bg:                     $white !default;
-$list-group-border-color:           rgba($black, .125) !default;
+$list-group-border-color:           $black !default;
 $list-group-border-width:           $border-width !default;
 $list-group-border-radius:          $border-radius !default;
 
 $list-group-item-padding-y:         .75rem !default;
-$list-group-item-padding-x:         1.25rem !default;
+$list-group-item-padding-x:         0 !default;
 
 $list-group-hover-bg:               $gray-100 !default;
 $list-group-active-color:           $component-active-color !default;
